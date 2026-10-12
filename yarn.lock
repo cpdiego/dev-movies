@@ -1299,6 +1299,11 @@ stylis@4.3.6:
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.3.6.tgz#7c7b97191cb4f195f03ecab7d52f7902ed378320"
   integrity sha512-yQ3rwFWRfwNUY7H5vpU0wfdkNSnvnJinhF9830Swlaxl03zsOjCfmX0ugac+3LtK0lYSgwL/KXc8oYL3mG4YFQ==
 
+swiper@^14.3.0:
+  version "14.3.0"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-14.3.0.tgz#fa6cc16df408e2838979ebb4ea3a41b3b7987339"
+  integrity sha512-qw0Xv1+sylM8KCQxWxV2iYAK2G6XjFGPZ/8F1baEsY8DK4A3sTnLx6jUJ0G71rDbVQ05JHMWkcWmJ5NvlxZO0w==
+
 tinyglobby@^0.2.17:
   version "0.2.17"
   resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.17.tgz#562a9a6c9eb2b3b123d39719f9af5bb44fcd7631"
