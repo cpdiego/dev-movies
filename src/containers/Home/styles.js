@@ -1,4 +1,24 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import { Container as SliderContainer } from '../../components/Slider/styles'
+
+const scale = keyframes`
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+`
+
+export const Wrapper = styled.div`
+  background-color: #000;
+  width: 100%;
+  min-height: 100vh;
+
+  ${SliderContainer}:last-of-type {
+    margin-bottom: 40px;
+  }
+`
 
 export const Background = styled.div`
   background-image: url(${(props) => props.$img});
@@ -8,6 +28,7 @@ export const Background = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   &::before {
     content: '';
@@ -17,6 +38,16 @@ export const Background = styled.div`
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
   }
 `
 
@@ -59,5 +90,6 @@ export const Poster = styled.div`
   img {
     width: 400px;
     border-radius: 20px;
+    animation: ${scale} 0.5s linear;
   }
 `

@@ -4,7 +4,14 @@ import { useNavigate } from 'react-router-dom'
 import Button from '../../components/Button'
 import Modal from '../../components/Modal'
 import Slider from '../../components/Slider'
-import { Background, Container, ContainerButtons, Info, Poster } from './styles'
+import {
+  Wrapper,
+  Background,
+  Container,
+  ContainerButtons,
+  Info,
+  Poster,
+} from './styles'
 import { getImages } from '../../utils/getImages'
 import {
   getMovies,
@@ -47,7 +54,7 @@ function Home() {
   }, [])
 
   return (
-    <>
+    <Wrapper>
       {movie && (
         <Background $img={getImages(movie.backdrop_path)}>
           {showModal && (
@@ -78,7 +85,7 @@ function Home() {
         <Slider info={popularSeries} title={'Séries Populares'} />
       )}
       {topArtist && <Slider info={topArtist} title={'Top Artistas'} />}
-    </>
+    </Wrapper>
   )
 }
 
